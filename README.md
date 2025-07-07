@@ -35,21 +35,26 @@ docker run -p 8000:8000 rag-pdf-qa
 
 ### 1. Upload files:
 
-curl -X POST http://127.0.0.1:8000/upload \
-  -F "file_path_1" \
+curl -X POST http://127.0.0.1:8000/upload \\
+
+  -F "file_path_1" \\
+  
   -F "file_path_2"
 
 return example:
 
 {
   "messgae": "Upload Successful!",
+  
   "session_id": "2f3cd581-c3d1-4e01-8672-6b3e88283900"
 }
 
 ### 2. Ask questions:
 
-curl -X POST http://127.0.0.1:8000/ask \
-  -H "Content-Type: application/json" \
+curl -X POST http://127.0.0.1:8000/ask \\
+
+  -H "Content-Type: application/json" \\
+  
   -d '{
     "session_id": "2f3cd581-c3d1-4e01-8672-6b3e88283900",
     "question": "What is the main conclusion of the document?"
