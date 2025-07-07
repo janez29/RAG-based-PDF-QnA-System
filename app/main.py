@@ -43,7 +43,7 @@ async def upload(files: list[UploadFile] = File(...)):
 @app.post("/ask")
 async def ask(request: query):
     if not is_cache(request.session_id):
-        return JSONResponse(status_code=500, content={"error","session_id not found!"})
+        return JSONResponse(status_code=500, content={"error":"session_id not found!"})
     try:
         RAG = get_cache(request.session_id)
         result = RAG.invoke({"query":request.question})
