@@ -60,4 +60,7 @@ curl -X POST http://127.0.0.1:8000/ask \\
     "question": "What is the main conclusion of the document?"
   }'
 
+return example:
+
+{"response":" The main conclusion of the document is that Goldilocks trespassed in the bears' home, consumed their food and personal belongings, and ultimately caused harm and distress to the bear family."}
 
