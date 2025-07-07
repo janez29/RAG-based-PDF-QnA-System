@@ -13,7 +13,9 @@ FastAPI, LangChain, Docker, LlamaCPP, ChromaDB, HuggingFace
 ### 1. Clone and Install
 
 git clone https://github.com/yourusername/rag-pdf-qa.git
+
 cd rag-pdf-qa
+
 pip install -r requirements.txt
 
 ### 2. set .env
@@ -25,6 +27,7 @@ uvicorn main:app --reload
 ### 4. Run with Docker
 
 docker build -t rag-pdf-qa .
+
 docker run -p 8000:8000 rag-pdf-qa
 
 
