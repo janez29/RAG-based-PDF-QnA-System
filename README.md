@@ -2,11 +2,17 @@
 
 ## Introduction
 
-This is light-weight PDF Q&A applications using Retrieval-Augmented Generation (RAG). It use Mistral-7B as a backbone and run LLM locally. It supports update single or mutiple PDFs at the same time, and the chunk size and overlap size can be customized. It adopts a session-based cache system with LRU eviction. The project also provides a dockerized version for easy deployment. 
+An end-to-end **Retrieval-Augmented Generation (RAG)** system that enables semantic question answering over user-uploaded PDF documents. Built using **FastAPI**, **LangChain**, **ChromaDB** and **FAISS**, with support for **multi-user sessions**, **query caching**, and **containerized deployment**.
 
-## Tech
+## 🔍 Key Features
 
-FastAPI, LangChain, Docker, LlamaCPP, ChromaDB, HuggingFace
+- **Multi-PDF Support**: Upload and analyze one or more PDF documents.
+- **Multi-User Sessions**: Isolated sessions using unique session IDs to prevent data leakage between users.
+- **Asynchronous API**: FastAPI with `async` endpoints enables concurrent query handling.
+- **Query Caching**: Reduce latency for repeated queries with in-memory cache.
+- **Semantic Search**: Use FAISS to perform vector-based retrieval on document chunks.
+- **Fully Containerized**: One-line setup with Docker and `docker-compose`.
+
 
 ## Steps: Start the host
 
