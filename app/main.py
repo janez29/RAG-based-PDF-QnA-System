@@ -5,7 +5,7 @@ from pydantic import BaseModel
 from app.init_rag import init_rag
 import uuid
 import os,shutil
-from set_cahce import set_cache, get_cache, is_cache
+from app.set_cahce import set_cache, get_cache, is_cache
 
 load_dotenv()
 app = FastAPI()
